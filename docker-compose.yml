@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  test-runner:
+    build:
+      context: .
+    volumes:
+      - ./commands:/root/commands
+      - ./files_to_test:/root/files_to_test
+      - ./repos:/root/repos
+      - ./helpers:/root/helpers
+    stdin_open: true
+    tty: true
