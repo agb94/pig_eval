@@ -9,7 +9,7 @@
    ```bash
    docker exec pig_eval-test-runner-1 bash /root/commands/107.sh {filename_to_test}
    ```
-   For example, to evaluate `107.py`, use:  
+   For example, to evaluate `107a.py`, use:  
    ```bash
    docker exec pig_eval-test-runner-1 bash /root/commands/107.sh 107a.py
    ```
