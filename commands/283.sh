@@ -1,11 +1,11 @@
 FILE_TO_TEST=$1
 
-ID=1
+ID=283
 PYTHON_VERSION=3.8.1
-REPO=/root/repos/web
-REPO_URL=https://github.com/studentenportal/web
-REF=4842cff
-FILEPATH=config/settings.py
+REPO=/root/repos/wsme
+REPO_URL=https://github.com/openstack/wsme
+REF=002473c0
+FILEPATH=wsme/types.py
 
 ######################## DO NOT MODIFY ########################
 pyenv install ${PYTHON_VERSION}
@@ -21,14 +21,11 @@ git reset --hard $REF
 
 pyenv local $ID-env
 
-cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
+cp /root/files_to_test/$FILE_TO_TEST $FILEPATH
 ###############################################################
 
 # Install dependencies
 python -m pip install --upgrade pip 
-python -m pip install pytest django unipath
+python -m pip install -r requirements-py3.txt 
 
-cp /root/helpers/test_settings.py test_settings.py
-
-# Test
-python test_settings.py && echo "SUCCESS"
+grep netaddr $FILEPATH && python -m pytest wsme/tests/test_types.py::TestTypes && echo "SUCCESS"

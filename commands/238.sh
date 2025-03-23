@@ -1,11 +1,11 @@
 FILE_TO_TEST=$1
 
-ID=1
+ID=238
 PYTHON_VERSION=3.8.1
-REPO=/root/repos/web
-REPO_URL=https://github.com/studentenportal/web
-REF=4842cff
-FILEPATH=config/settings.py
+REPO=/root/repos/aiortc
+REPO_URL=https://github.com/aiortc/aiortc
+REF=270edaf4
+FILEPATH=src/aiortc/stats.py
 
 ######################## DO NOT MODIFY ########################
 pyenv install ${PYTHON_VERSION}
@@ -17,18 +17,20 @@ fi
 
 cd $REPO
 git clean -df
-git reset --hard $REF
+git checkout $REF
 
 pyenv local $ID-env
 
 cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
 ###############################################################
 
-# Install dependencies
-python -m pip install --upgrade pip 
-python -m pip install pytest django unipath
 
-cp /root/helpers/test_settings.py test_settings.py
+# Install dependencies
+python -m pip install --upgrade pip
+python -m pip install dataclasses attr
+
+cp /root/helpers/test_stats.py src/aiortc/test_stats.py
+cd src/aiortc
 
 # Test
-python test_settings.py && echo "SUCCESS"
+[ $(grep -c "@dataclass" stats.py) -eq 9 ] && python test_stats.py && echo "SUCCESS"
