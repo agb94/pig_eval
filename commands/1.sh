@@ -26,7 +26,7 @@ cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
 
 # Install dependencies
 python -m pip install --upgrade pip 
-python -m pip install pytest django
+python -m pip install pytest django unipath
 
 cp /root/helpers/settings_test.py settings_test.py
 
