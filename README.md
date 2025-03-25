@@ -1,6 +1,6 @@
 1. Start the Docker containers in detached mode:  
    ```bash
-   docker-compose up --detach
+   docker-compose up --build --detach
    ```
 
 2. Locate the file to be evaluated in the `./files_to_test` directory.
