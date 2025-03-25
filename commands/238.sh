@@ -29,7 +29,7 @@ cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
 python -m pip install --upgrade pip
 python -m pip install dataclasses attr
 
-cp /root/helpers/test_stats.py src/aiortc/test_stats.py
+cp /root/helpers/238-test_stats.py src/aiortc/test_stats.py
 cd src/aiortc
 
 # Test

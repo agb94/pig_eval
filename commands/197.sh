@@ -24,7 +24,7 @@ pyenv local $ID-env
 cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
 ###############################################################
 
-cp /root/helpers/base.py base.py
+cp /root/helpers/197-base.py base.py
 
 # Install dependencies
 python -m pip install --upgrade pip

@@ -24,7 +24,7 @@ pyenv local $ID-env
 cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
 ###############################################################
 
-cp /root/helpers/test_connection.py serfclient/test_connection.py
+cp /root/helpers/225-test_connection.py serfclient/test_connection.py
 
 # Install dependencies
 python -m pip install --upgrade pip
