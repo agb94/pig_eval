@@ -18,7 +18,7 @@ fi
 
 cd $REPO
 git clean -df
-git checkout $REF
+git reset --hard $REF
 
 pyenv local $ID-env 
 
