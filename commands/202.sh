@@ -8,6 +8,7 @@ REF=cc47b42c
 FILEPATH=components/server/src/routes/auth.py
 
 ######################## DO NOT MODIFY ########################
+pyenv uninstall -f $ID-env
 pyenv install ${PYTHON_VERSION}
 pyenv virtualenv ${PYTHON_VERSION} $ID-env
 

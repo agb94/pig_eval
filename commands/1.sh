@@ -8,6 +8,7 @@ REF=4842cff
 FILEPATH=config/settings.py
 
 ######################## DO NOT MODIFY ########################
+pyenv uninstall -f $ID-env
 pyenv install ${PYTHON_VERSION}
 pyenv virtualenv ${PYTHON_VERSION} $ID-env
 

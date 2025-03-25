@@ -8,6 +8,7 @@ REF=b955ac9
 FILEPATH=test/nni_test/nnitest/utils.py
 
 ######################## DO NOT MODIFY ########################
+pyenv uninstall -f $ID-env
 pyenv install ${PYTHON_VERSION}
 pyenv virtualenv ${PYTHON_VERSION} $ID-env
 

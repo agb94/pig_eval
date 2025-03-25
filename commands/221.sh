@@ -8,6 +8,7 @@ REF=2960ec68
 FILEPATH=pogom/utils.py
 
 ######################## DO NOT MODIFY ########################
+pyenv uninstall -f $ID-env
 pyenv install ${PYTHON_VERSION}
 pyenv virtualenv ${PYTHON_VERSION} $ID-env
 

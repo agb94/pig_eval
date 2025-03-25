@@ -8,6 +8,7 @@ REF=270edaf4
 FILEPATH=src/aiortc/stats.py
 
 ######################## DO NOT MODIFY ########################
+pyenv uninstall -f $ID-env
 pyenv install ${PYTHON_VERSION}
 pyenv virtualenv ${PYTHON_VERSION} $ID-env
 

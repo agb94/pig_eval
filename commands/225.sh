@@ -8,6 +8,7 @@ REF=3adbf0f1
 FILEPATH=serfclient/connection.py
 
 ######################## DO NOT MODIFY ########################
+pyenv uninstall -f $ID-env
 pyenv install ${PYTHON_VERSION}
 pyenv virtualenv ${PYTHON_VERSION} $ID-env
 

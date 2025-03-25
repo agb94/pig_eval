@@ -1,11 +1,11 @@
 FILE_TO_TEST=$1
 
-ID=207
-PYTHON_VERSION=3.8.1
-REPO=/root/repos/pycon
-REPO_URL=https://github.com/pycon/pycon
-REF=3dba9637
-FILEPATH=symposion/markdown_parser.py
+ID=149
+PYTHON_VERSION=2.7.18
+REPO=/root/repos/glue
+REPO_URL=https://github.com/glue-viz/glue
+REF=5b2d7f92
+FILEPATH=glue/core/io.py
 
 ######################## DO NOT MODIFY ########################
 pyenv uninstall -f $ID-env
@@ -25,12 +25,9 @@ pyenv local $ID-env
 cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
 ###############################################################
 
-cp /root/helpers/207-test_markdown_parser.py symposion/test_markdown_parser.py
-
 # Install dependencies
 python -m pip install --upgrade pip
-python -m pip install html5lib bleach markdown django
+python -m pip install astropy
 
-# Test
-cd symposion
-python test_markdown_parser.py && echo "SUCCESS"
+cp /root/helpers/149-test_io.py test_io.py
+python test_io.py && echo "SUCCESS"

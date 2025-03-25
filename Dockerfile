@@ -6,7 +6,7 @@ RUN apt-get update \
     libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget \
     ca-certificates curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libxml2-dev \
     libxmlsec1-dev libffi-dev liblzma-dev mecab-ipadic-utf8 git vim bc unzip \
-    subversion perl zip locales netbase pkg-config zlib1g-dev python3-openssl openssl\
+    subversion perl zip locales netbase pkg-config zlib1g-dev python3-openssl openssl pandoc \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install pyenv
