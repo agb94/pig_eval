@@ -22,7 +22,7 @@ git reset --hard $REF
 
 pyenv local $ID-env
 
-cp /root/files_to_test/$FILE_TO_TEST $FILEPATH
+cp /root/files_to_test/$FILE_TO_TEST $REPO/$FILEPATH
 ###############################################################
 
 # Install dependencies
